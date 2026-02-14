@@ -57,9 +57,9 @@ const Footer: React.FC = () => {
             <div className="flex flex-row md:flex-col items-center md:items-end gap-6 md:gap-0">
               <div className="mt-4 md:mt-4 order-2 md:order-1">
                 <img
-                  src="https://freestylemediagroep.nl/wp-content/uploads/2019/04/erkend-leerbedrijf-SBB-transparant-def-180x180.png"
+                  src="https://www.s-bb.nl/sites/default/files/sbb_erkend_leerbedrijf_rgb.png"
                   alt="SBB Erkend Leerbedrijf"
-                  className="w-20 h-auto opacity-90 hover:opacity-100 transition-opacity"
+                  className="w-32 h-auto opacity-100 hover:opacity-90 transition-opacity"
                 />
               </div>
 
