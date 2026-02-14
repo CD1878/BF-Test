@@ -31,7 +31,7 @@ const ReviewsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-bf-espresso py-24 px-4 md:px-8 relative z-10">
+    <section className="bg-bf-choco py-24 px-4 md:px-8 relative z-10">
       <div className="container mx-auto max-w-7xl">
 
         <div className="text-center mb-12 md:mb-20">
