@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from './Button';
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-bf-espresso text-bf-taupe py-10 md:py-20 font-sans text-sm font-light tracking-wide">
@@ -59,13 +59,19 @@ const Footer: React.FC = () => {
                 <img
                   src="https://www.s-bb.nl/sites/default/files/sbb_erkend_leerbedrijf_rgb.png"
                   alt="SBB Erkend Leerbedrijf"
-                  className="w-32 h-auto opacity-100 hover:opacity-90 transition-opacity"
+                  className="w-32 h-auto opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
                 />
               </div>
 
-              <a href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" className="mt-0 md:mt-8 bg-bf-cream text-bf-espresso px-8 py-3 text-sm font-bold tracking-wide rounded-sm shadow-md hover:bg-white hover:scale-105 transition-all duration-300 order-1 md:order-2 inline-block shadow-lg">
+              <Button
+                variant="primary"
+                href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-0 md:mt-8 !bg-bf-cream !text-bf-espresso !px-8 !py-3 !text-sm !font-bold !tracking-wide !rounded-sm hover:!bg-white hover:!scale-105 shadow-md transition-all duration-300 order-1 md:order-2"
+              >
                 Reserveer een tafel
-              </a>
+              </Button>
             </div>
           </div>
 
