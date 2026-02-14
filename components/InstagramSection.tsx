@@ -28,7 +28,7 @@ const InstagramSection: React.FC = () => {
                     {images.map((src, index) => (
                         <a
                             key={index}
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/bluefusion.kitchenenbar/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative aspect-square overflow-hidden cursor-pointer"
@@ -49,7 +49,7 @@ const InstagramSection: React.FC = () => {
 
                 <div className="mt-12">
                     <a
-                        href="https://instagram.com"
+                        href="https://www.instagram.com/bluefusion.kitchenenbar/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-bf-espresso border-b border-bf-espresso pb-1 font-sans uppercase tracking-widest text-xs hover:text-bf-gold hover:border-bf-gold transition-colors"

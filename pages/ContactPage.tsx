@@ -56,7 +56,7 @@ const ContactPage: React.FC = () => {
 
                             {/* Social Icons */}
                             <div className="flex space-x-4 pt-4">
-                                <a href="#" className="p-2 border border-gray-800 rounded-sm hover:bg-gray-800 hover:text-white transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
+                                <a href="https://www.instagram.com/bluefusion.kitchenenbar/" target="_blank" rel="noopener noreferrer" className="p-2 border border-gray-800 rounded-sm hover:bg-gray-800 hover:text-white transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
                                 <a href="#" className="p-2 border border-gray-800 rounded-sm hover:bg-gray-800 hover:text-white transition-colors"><TripAdvisorIcon /></a>
                                 <a href="#" className="p-2 border border-black rounded-sm hover:bg-black hover:text-white transition-colors"><Facebook size={18} strokeWidth={1.5} /></a>
                             </div>
