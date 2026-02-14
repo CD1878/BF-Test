@@ -2,13 +2,13 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-bf-espresso text-bf-taupe py-20 font-sans text-sm font-light tracking-wide">
+    <footer id="contact" className="bg-bf-espresso text-bf-taupe py-10 md:py-20 font-sans text-sm font-light tracking-wide">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-left">
 
           {/* Locatie */}
           <div className="flex flex-col items-start">
-            <h4 className="font-serif text-lg text-bf-cream mb-6">Locatie</h4>
+            <h4 className="font-serif text-lg text-bf-cream mb-4 md:mb-6">Locatie</h4>
             <p className="mb-4 text-bf-taupe leading-relaxed text-xs">
               Deltapromenade 304<br />
               2554 GX Den Haag
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
           {/* Openingstijden */}
           <div className="flex flex-col items-start">
-            <h4 className="font-serif text-lg text-bf-cream mb-6">Openingstijden</h4>
+            <h4 className="font-serif text-lg text-bf-cream mb-4 md:mb-6">Openingstijden</h4>
             <div className="leading-relaxed space-y-4 text-xs">
               <div>
                 <span className="block text-bf-gold mb-1">Maandag</span>
@@ -41,36 +41,35 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col items-end text-right">
-            <h4 className="font-serif text-lg text-bf-cream mb-6">Contact</h4>
+          <div className="flex flex-col items-start md:items-end text-left md:text-right">
+            <h4 className="font-serif text-lg text-bf-cream mb-4 md:mb-6">Contact</h4>
             <p className="mb-2 text-xs">
               <a href="mailto:info@bluefusionkitchenbar.nl" className="hover:text-bf-cream transition-colors underline decoration-1 underline-offset-4">
                 info@bluefusionkitchenbar.nl
               </a>
             </p>
-            <p className="mb-8 text-xs">
+            <p className="mb-6 md:mb-8 text-xs">
               <a href="tel:0629146799" className="hover:text-bf-cream transition-colors underline decoration-1 underline-offset-4">
                 0629146799
               </a>
             </p>
-            <p className="mb-8 text-xs underline decoration-1 underline-offset-4 hover:text-bf-cream cursor-pointer transition-colors">
-              Reserveer direct
-            </p>
 
-            <div className="mt-4">
-              <div className="bg-bf-cream p-1 w-16 h-16 flex items-center justify-center">
-                <span className="text-[8px] text-bf-espresso font-bold text-center leading-tight">Erkend<br />Leerbedrijf</span>
+            <div className="flex flex-row md:flex-col items-center md:items-end gap-6 md:gap-0">
+              <div className="mt-4 md:mt-4 order-2 md:order-1">
+                <div className="bg-bf-cream p-1 w-16 h-16 flex items-center justify-center">
+                  <span className="text-[8px] text-bf-espresso font-bold text-center leading-tight">Erkend<br />Leerbedrijf</span>
+                </div>
               </div>
-            </div>
 
-            <button className="mt-8 bg-bf-cream text-bf-espresso px-4 py-2 text-xs font-bold rounded-sm shadow-sm hover:bg-white transition-colors">
-              Reserveer een tafel
-            </button>
+              <button className="mt-0 md:mt-8 bg-bf-cream text-bf-espresso px-4 py-2 text-xs font-bold rounded-sm shadow-sm hover:bg-white transition-colors order-1 md:order-2">
+                Reserveer een tafel
+              </button>
+            </div>
           </div>
 
         </div>
 
-        <div className="text-center mt-24 text-[10px] text-gray-700">
+        <div className="text-center mt-12 md:mt-24 text-[10px] text-gray-700">
           <p>© 2026 Blue Fusion Tapasbar Kijkduin. All rights reserved | Made by <a href="#" className="hover:text-gray-500 transition-colors">Chef Digital</a></p>
         </div>
       </div>
