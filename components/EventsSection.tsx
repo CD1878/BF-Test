@@ -65,13 +65,15 @@ const EventsSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8">
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 px-2">
-          <div>
+          <div className="w-full md:w-auto">
             <h3 className="font-sans text-bf-gold uppercase tracking-widest text-sm mb-2 font-bold">What's On</h3>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-bf-espresso">
               Events & Specials
             </h2>
           </div>
-          <div className="flex gap-4 mt-6 md:mt-0">
+
+          {/* Mobile: Arrows below title. Desktop: Arrows to the right. */}
+          <div className="flex gap-4 mt-8 md:mt-0 w-full md:w-auto justify-end">
             <button onClick={() => scroll('left')} className="p-3 rounded-full border border-bf-espresso/20 hover:bg-bf-caramel hover:text-white hover:border-bf-caramel transition-all">
               <ChevronLeft size={20} />
             </button>
