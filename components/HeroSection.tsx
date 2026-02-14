@@ -15,9 +15,7 @@ const HeroSection: React.FC = () => {
         <p className="text-bf-cream font-sans text-xl md:text-2xl uppercase tracking-[0.2em] mb-12 drop-shadow-md">
           Kijkduin
         </p>
-        <Button variant="primary" href="#reservation" className="!bg-[#C8BBA6] !border-[#C8BBA6] !text-black hover:!bg-[#b5a792]">
-          Tafel reserveren
-        </Button>
+
       </div>
     </section>
   );
