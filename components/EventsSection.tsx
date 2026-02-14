@@ -72,8 +72,8 @@ const EventsSection: React.FC = () => {
             </h2>
           </div>
 
-          {/* Mobile: Arrows below title. Desktop: Arrows to the right. */}
-          <div className="flex gap-4 mt-8 md:mt-0 w-full md:w-auto justify-end">
+          {/* Desktop: Arrows to the right. Mobile: Hidden (moved to bottom) */}
+          <div className="hidden md:flex gap-4 mt-8 md:mt-0 w-full md:w-auto justify-end">
             <button onClick={() => scroll('left')} className="p-3 rounded-full border border-bf-espresso/20 hover:bg-bf-caramel hover:text-white hover:border-bf-caramel transition-all">
               <ChevronLeft size={20} />
             </button>
@@ -146,6 +146,16 @@ const EventsSection: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Mobile: Arrows below the carousel */}
+        <div className="md:hidden flex justify-center gap-4 mt-6">
+          <button onClick={() => scroll('left')} className="p-3 rounded-full border border-bf-espresso/20 text-bf-espresso hover:bg-bf-caramel hover:text-white transition-all">
+            <ChevronLeft size={24} />
+          </button>
+          <button onClick={() => scroll('right')} className="p-3 rounded-full border border-bf-espresso/20 text-bf-espresso hover:bg-bf-caramel hover:text-white transition-all">
+            <ChevronRight size={24} />
+          </button>
         </div>
       </div>
     </section>
