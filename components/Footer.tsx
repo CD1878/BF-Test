@@ -61,9 +61,9 @@ const Footer: React.FC = () => {
                 </div>
               </div>
 
-              <button className="mt-0 md:mt-8 bg-bf-cream text-bf-espresso px-4 py-2 text-xs font-bold rounded-sm shadow-sm hover:bg-white transition-colors order-1 md:order-2">
+              <a href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" className="mt-0 md:mt-8 bg-bf-cream text-bf-espresso px-4 py-2 text-xs font-bold rounded-sm shadow-sm hover:bg-white transition-colors order-1 md:order-2 inline-block">
                 Reserveer een tafel
-              </button>
+              </a>
             </div>
           </div>
 

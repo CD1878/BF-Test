@@ -47,7 +47,7 @@ const IntroSection: React.FC = () => {
               </p>
             </div>
             <div className="mt-10">
-              <Button variant="primary" href="#reservation" className="!bg-bf-caramel !text-bf-cream hover:!bg-bf-choco border-none">
+              <Button variant="primary" href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" className="!bg-bf-caramel !text-bf-cream hover:!bg-bf-choco border-none">
                 Direct reserveren
               </Button>
             </div>

@@ -104,7 +104,7 @@ const Header: React.FC = () => {
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center space-x-4">
           <div className="hidden md:block">
-            <Button variant="outline" href="#reservation" className="!text-bf-cream !border-bf-cream hover:!bg-bf-cream hover:!text-bf-espresso">
+            <Button variant="outline" href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" className="!text-bf-cream !border-bf-cream hover:!bg-bf-cream hover:!text-bf-espresso">
               Tafel reserveren
             </Button>
           </div>
@@ -147,7 +147,7 @@ const Header: React.FC = () => {
             </a>
           ))}
           <div className="flex justify-center pt-4 pb-20">
-            <Button variant="primary" href="#reservation" onClick={() => setMobileMenuOpen(false)}>
+            <Button variant="primary" href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
               Tafel reserveren
             </Button>
           </div>

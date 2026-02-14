@@ -64,7 +64,7 @@ const EventDetailPage: React.FC = () => {
                         </div>
 
                         <div className="mt-16 text-center">
-                            <a href="#reservation" className="inline-block bg-bf-gold text-bf-espresso hover:bg-white hover:text-black px-10 py-4 text-xs uppercase tracking-[0.2em] font-bold rounded transition-all duration-300 transform hover:-translate-y-1">
+                            <a href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152" target="_blank" rel="noopener noreferrer" className="inline-block bg-bf-gold text-bf-espresso hover:bg-white hover:text-black px-10 py-4 text-xs uppercase tracking-[0.2em] font-bold rounded transition-all duration-300 transform hover:-translate-y-1">
                                 Reserveer Nu
                             </a>
                         </div>
