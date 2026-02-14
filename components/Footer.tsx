@@ -57,9 +57,9 @@ const Footer: React.FC = () => {
             <div className="flex flex-row md:flex-col items-center md:items-end gap-6 md:gap-0">
               <div className="mt-4 md:mt-4 order-2 md:order-1">
                 <img
-                  src="https://www.s-bb.nl/sites/default/files/sbb_erkend_leerbedrijf_rgb.png"
+                  src="https://seeklogo.com/images/S/sbb-erkend-leerbedrijf-logo-7E66F4D200-seeklogo.com.png"
                   alt="SBB Erkend Leerbedrijf"
-                  className="w-32 h-auto opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+                  className="w-32 h-auto opacity-90 hover:opacity-100 transition-opacity brightness-0 invert"
                 />
               </div>
 
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-0 md:mt-8 !bg-bf-cream !text-bf-espresso !px-8 !py-3 !text-sm !font-bold !tracking-wide !rounded-sm hover:!bg-white hover:!scale-105 shadow-md transition-all duration-300 order-1 md:order-2"
+                className="mt-0 md:mt-8 !bg-[#F2E9E4] !text-[#2B1E1A] !px-10 !py-4 !text-sm !font-bold !tracking-widest !rounded-sm hover:!bg-white hover:!scale-105 shadow-xl transition-all duration-300 order-1 md:order-2 uppercase min-w-[220px]"
               >
                 Reserveer een tafel
               </Button>
@@ -77,8 +77,8 @@ const Footer: React.FC = () => {
 
         </div>
 
-        <div className="text-center mt-12 md:mt-24 text-[10px] text-gray-700">
-          <p>© 2026 Blue Fusion Tapasbar Kijkduin. All rights reserved | Made by <a href="https://www.chefdigital.nl" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Chef Digital</a></p>
+        <div className="text-center mt-12 md:mt-24 text-[10px] text-white/80">
+          <p>© 2026 Blue Fusion Tapasbar Kijkduin. All rights reserved | Made by <a href="https://www.chefdigital.nl" target="_blank" rel="noopener noreferrer" className="hover:text-bf-gold transition-colors">Chef Digital</a></p>
         </div>
       </div>
     </footer>
