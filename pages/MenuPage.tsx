@@ -185,6 +185,8 @@ const MenuCategoryConfig = [
     }
 ];
 
+import ReviewsSection from '../components/ReviewsSection';
+
 const MenuPage: React.FC = () => {
     return (
         <div className="bg-bf-cream min-h-screen text-bf-dark font-sans">
@@ -239,6 +241,7 @@ const MenuPage: React.FC = () => {
                 </section>
             ))}
 
+            <ReviewsSection />
             <Footer />
             <FloatingWidget />
         </div>

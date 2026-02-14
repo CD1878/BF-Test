@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import FloatingWidget from '../components/FloatingWidget';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { events } from '../data/events';
+import ReviewsSection from '../components/ReviewsSection';
 
 const EventsPage: React.FC = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -105,6 +106,7 @@ const EventsPage: React.FC = () => {
 
             </main>
 
+            <ReviewsSection />
             <Footer />
             <FloatingWidget />
         </div>

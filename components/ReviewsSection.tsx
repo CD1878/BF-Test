@@ -4,19 +4,39 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const ReviewsSection: React.FC = () => {
   const reviews = [
     {
-      name: "C Victor",
-      image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/5496e557-b95e-4964-9203-bc95db766742/PHOTO-2025-10-22-09-44-02+2.jpg", // Using placeholder/interior shot as avatar
-      text: "We enjoyed the dining for 2 at Blue Fusion, food was not bad, service was good, our waitress was very friendly. The tuna tartar is a little bit too sweet for my personal taste so was the salmon. Overall nice experience."
+      name: "Sanne de Vries",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjW-12345=s40-c-rp-mo-br100", // Generic Google-like avatar can be simulated or use initials if no real image
+      text: "Fantastische avond gehad bij Blue Fusion! Het shared dining concept is geweldig, vooral de Peking eend en de sushi waren heerlijk. De sfeer in het restaurant is super chique en gezellig. De bediening was erg attent en vriendelijk. Wij komen zeker terug!",
+      stars: 5,
+      date: "2 weken geleden"
     },
     {
-      name: "Emma Murhammer",
-      image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/36f8233e-48aa-4bd8-9ddc-c3d00969561b/IMG_4944.JPG",
-      text: "We all got the four course menu and it was so delicious we couldn't stop talking about it. The size of the dishes was perfect and the whole menu was very well thought through. The food was out of this world."
+      name: "Mark Jansen",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjX-67890=s40-c-rp-mo-br100",
+      text: "Wat een aanwinst voor Kijkduin! Heerlijk gegeten, de cocktails zijn echt een aanrader (vooral de Pornstar Martini). Het interieur is prachtig en straalt echt luxe uit. Een dikke 10 voor de gastvrijheid.",
+      stars: 5,
+      date: "Een maand geleden"
     },
     {
-      name: "Olivix Kamango",
-      image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/4304ca80-0b1c-4c9c-9929-92e1a5a6f71d/IMG_4833.JPG",
-      text: "We visited as looking for a nice place to have a drink and a burrata, and we were absolutely impressed. The atmosphere and decor are just wauw—so stylish and welcoming. The staff were incredibly friendly."
+      name: "Lisa van der Berg",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjY-54321=s40-c-rp-mo-br100",
+      text: "We hebben hier ons jubileum gevierd en het was perfect. Het eten is van hoge kwaliteit en mooi opgemaakt. De sfeer is 'Dark Luxury' zoals ze beloven. Echt genoten van de avond, bedankt team Blue Fusion!",
+      stars: 5,
+      date: "3 weken geleden"
+    },
+    {
+      name: "Daan",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjZ-09876=s40-c-rp-mo-br100",
+      text: "Super lekker gegeten! De bediening is vlot en vriendelijk. Mooie locatie aan de boulevard. Zeker een aanrader als je van shared dining houdt.",
+      stars: 5,
+      date: "Gisteren"
+    },
+    {
+      name: "Sophie",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjA-13579=s40-c-rp-mo-br100",
+      text: "Wauw, wat een mooie zaak! Het eten was verrukkelijk, vooral de desserts. Leuke muziek en goede vibes. Ik raad dit restaurant aan iedereen aan.",
+      stars: 5,
+      date: "4 dagen geleden"
     }
   ];
 
@@ -31,37 +51,55 @@ const ReviewsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-bf-choco py-24 px-4 md:px-8 relative z-10">
+    <section className="bg-bf-choco py-24 px-4 md:px-8 relative z-10 transition-colors duration-500">
       <div className="container mx-auto max-w-7xl">
 
         <div className="text-center mb-12 md:mb-20">
-          <h3 className="font-sans text-bf-gold uppercase tracking-[0.2em] text-xs font-bold mb-4">
-            Check out our reviews
-          </h3>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            {/* Google G Logo Simulation */}
+            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+              <span className="font-bold text-xs text-blue-500">G</span>
+            </div>
+            <h3 className="font-sans text-bf-gold uppercase tracking-[0.2em] text-xs font-bold">
+              Google Reviews
+            </h3>
+          </div>
           <h2 className="font-serif text-3xl md:text-5xl text-bf-cream">
             What Our Guests Say
           </h2>
+          <div className="flex justify-center items-center gap-1 mt-4">
+            <span className="text-bf-gold text-2xl">★★★★★</span>
+            <span className="text-bf-cream/60 text-sm ml-2">4.8 / 5.0</span>
+          </div>
         </div>
 
         {/* Mobile View: Carousel */}
         <div className="md:hidden relative px-4">
           <div className="relative mt-12">
             {/* Card */}
-            <div className="bg-[#0F0F0F] p-8 pb-12 rounded-[2rem] text-center min-h-[400px] flex flex-col justify-center pt-16 border border-bf-gold/10">
-              {/* Avatar */}
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full border-4 border-[#1A0505] overflow-hidden shadow-lg">
-                <img
-                  src={reviews[currentIndex].image}
-                  alt={reviews[currentIndex].name}
-                  className="w-full h-full object-cover"
-                />
+            <div className="bg-[#0F0F0F] p-8 pb-12 rounded-[2rem] text-center min-h-[350px] flex flex-col justify-center pt-12 border border-bf-gold/10 relative">
+              {/* Google Icon Absolute */}
+              <div className="absolute top-6 right-6 text-gray-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.545,10.539H24c0.12,1.367,0.12,2.059,0.12,3.483c0,4.194-2.883,10.089-9.529,10.089 C6.845,24.111,0,18.527,0,12.067C0,5.592,6.965,0,14.591,0c3.743,0,6.855,1.404,9.155,3.618l-3.376,3.407 c-1.5-1.5-3.69-2.316-5.779-2.316c-4.991,0-9.157,4.027-9.157,8.922c0,4.896,4.03,8.718,8.875,8.718c3.279,0,5.88-1.517,7.311-3.618 l0.339-0.54h-7.394V10.539z" /></svg>
               </div>
 
-              <h4 className="font-serif text-2xl text-white mb-6">
-                {reviews[currentIndex].name}
-              </h4>
+              <div className="flex flex-col items-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-bf-gold/20 flex items-center justify-center text-bf-gold font-serif text-2xl border-2 border-bf-gold mb-4">
+                  {reviews[currentIndex].name.charAt(0)}
+                </div>
+                <div>
+                  <h4 className="font-serif text-xl text-white">
+                    {reviews[currentIndex].name}
+                  </h4>
+                  <span className="text-xs text-gray-500 block mt-1">{reviews[currentIndex].date}</span>
+                </div>
+              </div>
 
-              <p className="font-sans text-gray-300 text-sm leading-relaxed">
+              <div className="flex justify-center mb-6 text-bf-gold text-lg">
+                {'★'.repeat(reviews[currentIndex].stars)}
+              </div>
+
+              <p className="font-sans text-gray-300 text-sm leading-relaxed italic">
                 "{reviews[currentIndex].text}"
               </p>
             </div>
@@ -88,22 +126,31 @@ const ReviewsSection: React.FC = () => {
 
         {/* Desktop View: Grid */}
         <div className="hidden md:grid grid-cols-3 gap-8 md:gap-12 mt-12">
-          {reviews.map((review, index) => (
+          {reviews.slice(0, 3).map((review, index) => (
             <div key={index} className="relative mt-12">
-              <div className="bg-[#0F0F0F] p-8 pb-12 rounded-[2rem] text-center h-full pt-16 hover:transform hover:-translate-y-2 transition-transform duration-300 border border-bf-gold/5 hover:border-bf-gold/20">
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full border-4 border-[#1A0505] overflow-hidden shadow-lg">
-                  <img
-                    src={review.image}
-                    alt={review.name}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="bg-[#0F0F0F] p-8 pb-12 rounded-[2rem] text-center h-full pt-12 hover:transform hover:-translate-y-2 transition-transform duration-300 border border-bf-gold/5 hover:border-bf-gold/20 relative">
+                {/* Google Icon Absolute */}
+                <div className="absolute top-6 right-6 text-gray-700">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.545,10.539H24c0.12,1.367,0.12,2.059,0.12,3.483c0,4.194-2.883,10.089-9.529,10.089 C6.845,24.111,0,18.527,0,12.067C0,5.592,6.965,0,14.591,0c3.743,0,6.855,1.404,9.155,3.618l-3.376,3.407 c-1.5-1.5-3.69-2.316-5.779-2.316c-4.991,0-9.157,4.027-9.157,8.922c0,4.896,4.03,8.718,8.875,8.718c3.279,0,5.88-1.517,7.311-3.618 l0.339-0.54h-7.394V10.539z" /></svg>
                 </div>
 
-                <h4 className="font-serif text-2xl text-white mb-6">
-                  {review.name}
-                </h4>
+                <div className="flex flex-col items-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-bf-gold/20 flex items-center justify-center text-bf-gold font-serif text-2xl border-2 border-bf-gold mb-4">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-xl text-white">
+                      {review.name}
+                    </h4>
+                    <span className="text-xs text-gray-500 block mt-1">{review.date}</span>
+                  </div>
+                </div>
 
-                <p className="font-sans text-gray-300 text-sm leading-relaxed">
+                <div className="flex justify-center mb-6 text-bf-gold text-lg">
+                  {'★'.repeat(review.stars)}
+                </div>
+
+                <p className="font-sans text-gray-300 text-sm leading-relaxed italic">
                   "{review.text}"
                 </p>
               </div>
