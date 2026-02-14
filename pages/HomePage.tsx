@@ -35,11 +35,7 @@ const HomePage: React.FC = () => {
                 <div className="h-px bg-bf-gold/20 w-full relative z-20"></div>
                 <EventsSection />
 
-                {/* Subtle Line: Events -> Groups */}
-                <div className="h-px bg-bf-gold/20 w-full relative z-20"></div>
-                <GroupsSection />
-
-                {/* Subtle Line: Groups -> Reservation */}
+                {/* Subtle Line: Events -> Reservation (Groups is now ReservationCTA) */}
                 <div className="h-px bg-bf-gold/20 w-full relative z-20"></div>
                 <ReservationCTA />
 
