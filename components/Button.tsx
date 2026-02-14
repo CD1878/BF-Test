@@ -9,8 +9,8 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', className = '', onClick, href }) => {
-  const baseStyles = "inline-block px-8 py-3 text-sm font-medium uppercase tracking-wider transition-colors duration-300 border cursor-pointer text-center";
-  
+  const baseStyles = "inline-block px-8 py-3 text-sm font-medium uppercase tracking-wider transition-colors duration-300 border cursor-pointer text-center rounded-full";
+
   const variants = {
     primary: "bg-blue-fusion-gold border-blue-fusion-gold text-black hover:bg-transparent hover:text-white hover:border-white",
     outline: "bg-transparent border-white text-white hover:bg-white hover:text-black",
@@ -20,18 +20,18 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', classNam
   };
 
   // Custom overrides for specific site look
-  const specificStyles = variant === 'primary' 
-    ? "bg-[#C8BBA6] border-[#C8BBA6] text-black hover:bg-[#b0a28d]" 
+  const specificStyles = variant === 'primary'
+    ? "bg-[#C8BBA6] border-[#C8BBA6] text-black hover:bg-[#b0a28d]"
     : variant === 'outline'
-    ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
-    : "bg-[#4a4a4a] text-white border-[#4a4a4a] hover:bg-black"; // Fallback
+      ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
+      : "bg-[#4a4a4a] text-white border-[#4a4a4a] hover:bg-black"; // Fallback
 
   const Component = href ? 'a' : 'button';
   const props = href ? { href } : { onClick };
 
   return (
-    <Component 
-      {...props} 
+    <Component
+      {...props}
       className={`${baseStyles} ${specificStyles} ${className}`}
     >
       {children}
