@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-bf-espresso text-bf-taupe py-10 md:py-20 font-sans text-sm font-light tracking-wide">
@@ -54,25 +54,7 @@ const Footer: React.FC = () => {
               </a>
             </p>
 
-            <div className="flex flex-row md:flex-col items-center md:items-end gap-6 md:gap-0">
-              <div className="mt-4 md:mt-4 order-2 md:order-1">
-                <img
-                  src="https://seeklogo.com/images/S/sbb-erkend-leerbedrijf-logo-7E66F4D200-seeklogo.com.png"
-                  alt="SBB Erkend Leerbedrijf"
-                  className="w-32 h-auto opacity-90 hover:opacity-100 transition-opacity brightness-0 invert"
-                />
-              </div>
 
-              <Button
-                variant="primary"
-                href="https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-0 md:mt-8 !bg-[#F2E9E4] !text-[#2B1E1A] !px-10 !py-4 !text-sm !font-bold !tracking-widest !rounded-sm hover:!bg-white hover:!scale-105 shadow-xl transition-all duration-300 order-1 md:order-2 uppercase min-w-[220px]"
-              >
-                Reserveer een tafel
-              </Button>
-            </div>
           </div>
 
         </div>
