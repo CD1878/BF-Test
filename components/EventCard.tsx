@@ -28,7 +28,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
 
                 {/* Text Container (Bordered Block) */}
                 {/* On mobile: Second. On Desktop: Left aligned, wide. */}
-                <div className="order-2 w-full md:w-[75%] lg:w-[72%] border border-white/20 rounded-card p-8 md:p-16 lg:p-24 relative z-0 md:min-h-[550px] flex flex-col justify-center bg-transparent transition-colors duration-500 hover:border-white/40">
+                <div className="order-2 w-full md:w-[75%] lg:w-[72%] border border-white/10 rounded-card p-8 md:p-16 lg:p-24 relative z-0 md:min-h-[550px] flex flex-col justify-center bg-white/5 backdrop-blur-md transition-all duration-700 group-hover:border-bf-gold/30 group-hover:bg-white/10 group-hover:shadow-[0_0_50px_-10px_rgba(166,124,82,0.1)]">
                     <div className="max-w-2xl">
                         <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 uppercase tracking-wide leading-none">
                             {event.title}

@@ -8,7 +8,7 @@ const FloatingWidget: React.FC = () => {
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] group"
     >
-      <div className="bg-bf-gold text-white font-serif tracking-widest uppercase text-xs md:text-sm font-bold py-4 px-8 rounded-full shadow-2xl hover:bg-bf-cream hover:text-bf-espresso transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 border border-white/10 backdrop-blur-sm">
+      <div className="bg-bf-gold/90 text-white font-serif tracking-widest uppercase text-xs md:text-sm font-bold py-4 px-8 rounded-full shadow-2xl hover:bg-bf-cream hover:text-bf-espresso transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 border border-white/20 backdrop-blur-md hover:shadow-bf-gold/50">
         <span>Reserveer een tafel</span>
       </div>
 
