@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FloatingWidget from '../components/FloatingWidget';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { events } from '../data/events';
 
 const EventsPage: React.FC = () => {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollContainerRef.current) {
+            const { current } = scrollContainerRef;
+            const scrollAmount = 300;
+            if (direction === 'left') {
+                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <div className="min-h-screen bg-bf-espresso text-bf-cream selection:bg-bf-gold selection:text-white">
             <Header />
@@ -32,12 +46,15 @@ const EventsPage: React.FC = () => {
                 </section>
 
                 {/* Grid Section for ALL events */}
-                <section className="max-w-[1920px] mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <section className="max-w-[1920px] mx-auto relative">
+                    <div
+                        ref={scrollContainerRef}
+                        className="flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible gap-4 md:gap-0 snap-x snap-mandatory md:snap-none scrollbar-hide pb-4 md:pb-0"
+                    >
                         {events.map((event) => (
                             <div
                                 key={event.id}
-                                className="group relative h-[400px] md:h-[500px] overflow-hidden border-r border-b border-bf-gold/10 last:border-r-0"
+                                className="group relative min-w-[85vw] md:min-w-0 flex-shrink-0 md:flex-shrink h-[400px] md:h-[500px] overflow-hidden md:border-r md:border-b border border-bf-gold/10 md:border-bf-gold/10 md:last:border-r-0 snap-center rounded-2xl md:rounded-none"
                             >
                                 {/* Image Background */}
                                 <div className="absolute inset-0 w-full h-full">
@@ -73,6 +90,16 @@ const EventsPage: React.FC = () => {
                                 <Link to={`/events/${event.id}`} className="absolute inset-0 z-20" aria-label={`View ${event.title}`}></Link>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Mobile Arrows */}
+                    <div className="md:hidden flex justify-center gap-4 mt-6">
+                        <button onClick={() => scroll('left')} className="p-3 rounded-full border border-bf-gold/20 text-bf-gold hover:bg-bf-gold hover:text-black transition-all">
+                            <ChevronLeft size={24} />
+                        </button>
+                        <button onClick={() => scroll('right')} className="p-3 rounded-full border border-bf-gold/20 text-bf-gold hover:bg-bf-gold hover:text-black transition-all">
+                            <ChevronRight size={24} />
+                        </button>
                     </div>
                 </section>
 
