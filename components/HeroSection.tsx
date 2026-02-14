@@ -3,7 +3,7 @@ import Button from './Button';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed">
       {/* Overlay: Warmer Espresso tint */}
       <div className="absolute inset-0 bg-bf-espresso/40"></div>
 
