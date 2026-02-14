@@ -26,7 +26,7 @@ const EventsPage: React.FC = () => {
         <div className="min-h-screen bg-bf-espresso text-bf-cream selection:bg-bf-gold selection:text-white">
             <Header />
 
-            <main className="pt-32 pb-20 px-4 md:px-8">
+            <main className="pt-48 md:pt-40 pb-20 px-4 md:px-8">
 
                 {/* Header Section */}
                 <section className="container mx-auto mb-12 md:mb-16 text-center">
