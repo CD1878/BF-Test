@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center mt-12 md:mt-24 text-[10px] text-gray-700">
-          <p>© 2026 Blue Fusion Tapasbar Kijkduin. All rights reserved | Made by <a href="#" className="hover:text-gray-500 transition-colors">Chef Digital</a></p>
+          <p>© 2026 Blue Fusion Tapasbar Kijkduin. All rights reserved | Made by <a href="https://www.chefdigital.nl" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Chef Digital</a></p>
         </div>
       </div>
     </footer>
