@@ -10,8 +10,9 @@ const eventsData = [
     description: "Speciaal op de Oyster Sunday trekken wij alle bubbels open, zodat je ze ook per glas kunt bestellen.",
     image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/b9475b59-bb04-4df4-9ffe-8e68c2474019/IMG_2915+groot.jpeg",
     price: "€1,00",
-    link: "#reservation",
-    colSpan: "col-span-1 lg:col-span-1"
+    link: "https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152",
+    colSpan: "col-span-1 lg:col-span-1",
+
   },
   {
     id: 2,
@@ -20,8 +21,9 @@ const eventsData = [
     description: "Elke donderdag genieten van onze signature cocktails voor een speciale prijs. De perfecte start van je weekend.",
     image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/36f8233e-48aa-4bd8-9ddc-c3d00969561b/IMG_4944.JPG",
     price: "€7,50",
-    link: "#reservation",
-    colSpan: "col-span-1 lg:col-span-1"
+    link: "https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152",
+    colSpan: "col-span-1 lg:col-span-1",
+
   },
   {
     id: 3,
@@ -30,8 +32,9 @@ const eventsData = [
     description: "Schuif aan tussen 17:00 en 17:30 en geniet van 15% korting op de gehele rekening op vrijdag en zaterdag.",
     image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/2dd88d97-6399-4c50-a7ce-a8a443cb4516/Vroege+vogel+voordeel+-+Blue+Fusion.jpg",
     price: "-15%",
-    link: "#reservation",
-    colSpan: "col-span-1 lg:col-span-1"
+    link: "https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152",
+    colSpan: "col-span-1 lg:col-span-1",
+
   },
   {
     id: 4,
@@ -40,8 +43,9 @@ const eventsData = [
     description: "Ervaar onze beroemde rijsttafel met diverse fusion gerechtjes om te delen. Een culinaire reis op woensdag.",
     image: "https://images.squarespace-cdn.com/content/v1/66aa3b07fec7ce3c6365fe2b/51b20e79-9636-4a9c-8408-ff994d7579f0/IMG_4833.JPG", // Placeholder
     price: "€32,50",
-    link: "#reservation",
-    colSpan: "col-span-1 lg:col-span-1"
+    link: "https://widget.thefork.com/a30e4e59-2183-4b34-83a4-8d2a151ae152",
+    colSpan: "col-span-1 lg:col-span-1",
+
   }
 ];
 
@@ -135,12 +139,17 @@ const EventsSection: React.FC = () => {
                       {event.description}
                     </p>
 
-                    <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-bf-gold group-hover:text-white transition-colors duration-300 group-hover:underline underline-offset-8 decoration-bf-gold">
+                    <a
+                      href={event.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-bf-gold group-hover:text-white transition-colors duration-300 group-hover:underline underline-offset-8 decoration-bf-gold"
+                    >
                       Check it out and book
                       <span className="bg-white/20 p-1.5 rounded-full group-hover:bg-bf-gold transition-colors">
                         <ArrowRight size={14} className="transform group-hover:translate-x-0.5 transition-transform" />
                       </span>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
