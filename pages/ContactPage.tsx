@@ -29,44 +29,50 @@ const ContactPage: React.FC = () => {
             </section>
 
             {/* Contact Content & Form */}
-            <section className="bg-bf-cream py-20 px-6 lg:px-12">
-                <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+            <section className="relative bg-bf-cream py-24 px-6 lg:px-12 overflow-hidden">
+                {/* Background Pattern/Image */}
+                <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-5"></div>
+
+                <div className="relative z-10 container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
 
                     {/* Left Column: Info */}
-                    <div>
-                        <h2 className="font-serif text-3xl md:text-4xl mb-8 text-bf-dark font-normal">Telefonisch of email</h2>
+                    <div className="flex flex-col justify-center">
+                        <h2 className="font-serif text-3xl md:text-5xl mb-8 text-bf-espresso font-normal">Telefonisch of email</h2>
 
-                        <div className="font-sans text-sm space-y-6 text-gray-700 leading-relaxed">
+                        <div className="font-sans text-base space-y-8 text-bf-espresso/80 leading-relaxed">
                             <p>
-                                <a href="mailto:info@bluefusionkitchenenbar.nl" className="block underline decoration-1 underline-offset-4 hover:no-underline mb-2 transition-all">info@bluefusionkitchenenbar.nl</a>
-                                <a href="tel:0629146799" className="block underline decoration-1 underline-offset-4 hover:no-underline transition-all">0629146799</a>
+                                <a href="mailto:info@bluefusionkitchenenbar.nl" className="block text-xl md:text-2xl text-bf-espresso hover:text-bf-gold transition-colors mb-2">info@bluefusionkitchenenbar.nl</a>
+                                <a href="tel:0629146799" className="block text-xl md:text-2xl text-bf-espresso hover:text-bf-gold transition-colors">0629146799</a>
                             </p>
 
-                            <p>Je kunt ook eenvoudig ons formulier gebruiken.</p>
+                            <p className="text-lg font-light">Je kunt ook eenvoudig ons formulier hiernaast gebruiken.</p>
 
-                            <div className="pt-2">
-                                <strong className="block mb-1 font-bold text-gray-900">Groepen</strong>
-                                <p className="mb-1">Wil je reserveren voor méér dan 10 personen? Gebruik dan ons <a href="#" className="underline hover:no-underline transition-all">reserveringsformulier voor groepen</a>.</p>
+                            <div className="pt-4 border-t border-bf-espresso/10">
+                                <strong className="block mb-2 font-serif text-xl text-bf-espresso">Groepen</strong>
+                                <p className="mb-1 text-sm">Wil je reserveren voor méér dan 10 personen? Gebruik dan ons <a href="#" className="text-bf-gold underline underline-offset-4 hover:text-bf-espresso transition-all">reserveringsformulier voor groepen</a>.</p>
                             </div>
 
-                            <div className="pt-2">
-                                <strong className="block mb-1 font-bold text-gray-900">Zakelijk</strong>
-                                <p>Wil je reserveren voor een zakelijke borrel, lunch of diner? Of heb je andere wensen? Gebruik dan ons <a href="#" className="underline hover:no-underline transition-all">reserveringsformulier voor groepen</a> of neem even telefonisch contact met ons op.</p>
+                            <div className="pt-4 border-t border-bf-espresso/10">
+                                <strong className="block mb-2 font-serif text-xl text-bf-espresso">Zakelijk</strong>
+                                <p className="text-sm">Wil je reserveren voor een zakelijke borrel, lunch of diner? Of heb je andere wensen? Gebruik dan ons <a href="#" className="text-bf-gold underline underline-offset-4 hover:text-bf-espresso transition-all">reserveringsformulier voor groepen</a> of neem even telefonisch contact met ons op.</p>
                             </div>
 
                             {/* Social Icons */}
-                            <div className="flex space-x-4 pt-4">
-                                <a href="https://www.instagram.com/bluefusion.kitchenenbar/" target="_blank" rel="noopener noreferrer" className="p-2 border border-gray-800 rounded-sm hover:bg-gray-800 hover:text-white transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
-                                <a href="#" className="p-2 border border-gray-800 rounded-sm hover:bg-gray-800 hover:text-white transition-colors"><TripAdvisorIcon /></a>
-                                <a href="#" className="p-2 border border-black rounded-sm hover:bg-black hover:text-white transition-colors"><Facebook size={18} strokeWidth={1.5} /></a>
+                            <div className="flex space-x-4 pt-6">
+                                <a href="https://www.instagram.com/bluefusion.kitchenenbar/" target="_blank" rel="noopener noreferrer" className="p-3 border border-bf-espresso/20 rounded-full hover:bg-bf-gold hover:text-black hover:border-bf-gold transition-all duration-300 text-bf-espresso"><Instagram size={20} strokeWidth={1.5} /></a>
+                                <a href="#" className="p-3 border border-bf-espresso/20 rounded-full hover:bg-bf-gold hover:text-black hover:border-bf-gold transition-all duration-300 text-bf-espresso"><TripAdvisorIcon /></a>
+                                <a href="#" className="p-3 border border-bf-espresso/20 rounded-full hover:bg-bf-gold hover:text-black hover:border-bf-gold transition-all duration-300 text-bf-espresso"><Facebook size={20} strokeWidth={1.5} /></a>
                             </div>
                         </div>
                     </div>
 
                     {/* Right Column: Form */}
-                    <div>
-                        <h2 className="font-serif text-3xl md:text-4xl mb-8 text-bf-dark font-normal">Contactformulier</h2>
-                        <ContactForm />
+                    <div className="relative">
+                        <div className="absolute -inset-4 bg-bf-gold/20 rounded-[2rem] blur-xl opacity-20"></div>
+                        <div className="relative bg-bf-espresso p-8 md:p-12 rounded-[2rem] shadow-2xl">
+                            <h2 className="font-serif text-3xl md:text-4xl mb-8 text-bf-cream font-normal">Contactformulier</h2>
+                            <ContactForm />
+                        </div>
                     </div>
 
                 </div>
@@ -89,7 +95,7 @@ const ContactPage: React.FC = () => {
                         href="https://www.google.com/maps/dir//Blue+Fusion+Tapasbar,+Deltapromenade+304,+2554+GX+Den+Haag"
                         target="_blank"
                         rel="noreferrer"
-                        className="bg-bf-accent text-white px-8 py-4 uppercase text-xs font-bold tracking-widest shadow-md hover:bg-bf-dark transition-colors rounded-sm inline-block"
+                        className="bg-bf-gold text-bf-espresso px-8 py-4 uppercase text-xs font-bold tracking-widest shadow-lg hover:bg-white hover:text-black transition-colors rounded-sm inline-block"
                     >
                         Navigeer direct
                     </a>
